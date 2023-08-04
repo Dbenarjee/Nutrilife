@@ -1,0 +1,265 @@
+html{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+body::-webkit-scrollbar{
+    display:none;
+}
+
+section {
+    min-height: 100vh;
+}
+/* home page */
+.logo{
+    position: absolute;
+    left: 50px;
+    top: 20px;
+}
+.img1 {
+    position: absolute;
+    width: 264px;
+    height: 298px;
+    left: 700px;
+    top: 120px;
+}
+
+.name {
+    position: absolute;
+    width: 461px;
+    height: 131px;
+    left: 100px;
+    top: 11rem;
+}
+
+p {
+    height: 300px;
+    width: 600px;
+    left: 48px;
+    top: 4rem;
+    border-radius: nullpx;
+    font-size: 36px;
+}
+
+.nav {
+    position: absolute;
+    width: 703px;
+    height: 120px;
+    left: 670px;
+    top: 42px;
+}
+
+ul {
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul li {
+    list-style: none;
+    margin-right: 62px;
+    font-size: 24px;
+    padding: 0;
+    margin-right: 2.5rem;
+}
+
+ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+/* home pg end */
+/* about  */
+.about {
+    position: absolute;
+    width: 496px;
+    height: 122px;
+    left: 52px;
+    margin-top: 15px;
+    font-family: 'Roboto Slab';
+    font-weight: 400;
+    font-size: 45px;
+    line-height: 119px;
+}
+
+.matter {
+    position: absolute;
+    width: 1100px;
+    height: 600px;
+    left: 52px;
+    font-family: 'Roboto Slab';
+    font-weight: 350;
+    font-size: 23px;
+    line-height: 35px;
+    color: black;
+}
+@media(width < 600px){
+    .matter{
+        font-size: 23px;  
+        width: auto;
+        background-attachment: fixed;
+    }
+}
+
+span{
+    color: #FE0101;
+}
+/* about ending */
+/* services */
+.ser{
+    width: 496px;
+    height: 122px;
+    margin-left: 3rem;
+    margin-top: 5rem;
+    font-family: 'Roboto Slab';
+    font-weight: 400;
+    font-size: 45px;
+    line-height: 119px;
+
+}
+.box {
+    display: inline-block;
+    position: relative;
+    margin: 45px;
+    padding: 4px;
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    align-items: center;
+    margin-top: 2rem;
+}
+.box img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.box:hover img {
+    transform: scale(1.1);
+}
+
+.box .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    
+}
+
+.box:hover .overlay {
+    opacity: 1;
+}
+
+.box .overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 1px 1px #000;
+}
+.box a {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+.leaf{
+    position: absolute;
+left: 1050.51px;
+top: 400px;
+mix-blend-mode: multiply;
+opacity: 0.5;
+transform: rotate(50.72deg);
+}
+.leaf1{
+    position: absolute;
+left: 1050.51px;
+top: 1000px;
+mix-blend-mode: multiply;
+opacity: 0.5;
+transform: rotate(50.72deg);
+}
+.dumbbel{
+    position: absolute;
+left: -62px;
+top: 440.11px;
+mix-blend-mode: multiply;
+opacity: 0.5;
+transform: rotate(24.32deg);
+} 
+.stem{
+    position: absolute;
+left: -90px;
+top: 850px;
+mix-blend-mode: multiply;
+opacity: 0.5;
+transform: rotate(-7.07deg);
+}
+/* contact us */
+.cont{
+    width: 496px;
+    height: 122px;
+    margin-left: 3rem;
+    margin-top: 3rem;
+    font-family: 'Roboto Slab';
+    font-weight: 400;
+    font-size: 45px;
+    line-height: 119px;
+    padding: 0;
+}
+.bg{
+    background-image: url('https://images.pexels.com/photos/1128678/pexels-photo-1128678.jpeg');
+    background-size: cover;
+    /* background-attachment: fixed; */
+    
+}
+
+.us{
+    float: left;
+    margin-left: 8rem;
+}
+.subdiv{
+    border-radius: 50px ;
+}
+input{
+    height: 33px;
+    width: 250px;
+}
+textarea{
+    height: 90px;
+    width: 252px;
+    resize: none;
+}
+button{
+    margin-top: 0.5rem;
+    height: 35px;
+    width: 70px;
+    background-color: aqua;
+    border: none;
+    border-radius: 10px;
+}
+.place{
+    margin-left: 4rem;
+    margin-top: 2rem;
+}
+footer{
+    margin-bottom: 2rem;
+    background-color: aquamarine;
+}

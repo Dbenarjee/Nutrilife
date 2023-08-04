@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>BMI Calculator</title>
+    <style>
+      /* table {
+        border: 1px solid black;
+        border-collapse: collapse;
+        margin: 20px auto;
+        width: 50%;
+      }
+      th, td {
+        border: 1px solid black;
+        padding: 10px;
+        text-align: left;
+      }
+      */
+      h1{
+        font-size:2.5rem;
+      }
+      input{
+        font-size: 1.3rem;
+      }
+      button {
+        background-color: #4CAF50;
+        border: none;
+        color: white;
+        padding: 10px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 10px 0;
+        cursor: pointer;
+        border-radius: 0.6rem;
+      }
+      button:hover {
+        background-color: #3e8e41;
+      }
+      #result{
+        font-size: 35px;
+        font-weight: bold;
+        margin-top: 20px;
+        color:black;
+      }
+      .table,h1,.conv{
+        padding: 0 3%;
+        text-size-adjust: 5px;
+      }
+      /* body{
+        background-color: #E3F4F4;
+
+      } */
+      th{
+        color:black;
+        font-size: 30px;
+      }
+      a{
+        text-decoration: none;
+        color: black;
+        font-size: 20px;
+      }
+      input[type=text]{
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      function calculateBMI() {
+        var weight = parseFloat(document.getElementById("weight").value);
+        var height = parseFloat(document.getElementById("height").value)/100;
+        var bmi = weight / (height * height);
+        if(bmi<16)
+        document.getElementById("result").innerHTML ="<br>"+(bmi.toFixed(2))+"<br>"+"Severe Thinness"+"<br>"+
+        "<img src='https://medicaldarpan.com/wp-content/uploads/2022/09/Weight-Gain-Diet.jpg' height='300'>";
+        else if(bmi>=16&&bmi<17){
+        document.getElementById("result").innerHTML ="<br>"+(bmi.toFixed(2))+"<br>"+"Moderate Thinness"+"<br>"+
+        "<img src='https://medicaldarpan.com/wp-content/uploads/2022/09/Weight-Gain-Diet.jpg' height='300'>";}
+        else if(bmi>=17&&bmi<18.5){
+        document.getElementById("result").innerHTML ="<br>"+(bmi.toFixed(2))+"<br>"+"Mild Thinness"+"<br>"+
+        "<img src='https://medicaldarpan.com/wp-content/uploads/2022/09/Weight-Gain-Diet.jpg' height='300'>";}
+        else if(bmi>=18.5&&bmi<25)
+        document.getElementById("result").innerHTML ="<br>"+(bmi.toFixed(2))+"<br>"+"Normal"+"<h1>YOU ARE PREFECTLY FIT...</h1>";
+        else if(bmi>=25&&bmi<30){
+        document.getElementById("result").innerHTML ="<br>"+(bmi.toFixed(2))+"<br>"+"Over weight"+"<br>"+
+        "<img src='https://idietitian.in/wp-content/uploads/2015/08/vegetarian-diet-plan-to-lose-weight2-day-diet-plan-weight-loss-diet-plan-for-vegetarians-fat-kdfn622m.jpg'height='280'width='350'>";}
+        else if(bmi>=30&&bmi<35){
+        document.getElementById("result").innerHTML ="<br>"+(bmi.toFixed(2))+"<br>"+"Obese class1"+"<br>"+
+        "<img src='https://idietitian.in/wp-content/uploads/2015/08/vegetarian-diet-plan-to-lose-weight2-day-diet-plan-weight-loss-diet-plan-for-vegetarians-fat-kdfn622m.jpg'height='280'width='350'>";}
+        else if(bmi>=35&&bmi<40)
+        document.getElementById("result").innerHTML ="<br>"+(bmi.toFixed(2))+"<br>"+"Obese class2"+"<br>"+
+        "<img src='https://idietitian.in/wp-content/uploads/2015/08/vegetarian-diet-plan-to-lose-weight2-day-diet-plan-weight-loss-diet-plan-for-vegetarians-fat-kdfn622m.jpg'height='280'width='350'>";
+        else if(bmi>40)
+        document.getElementById("result").innerHTML ="<br>"+(bmi.toFixed(2))+"<br>"+"Obese class3"+"<br>"+
+        "<img src='https://idietitian.in/wp-content/uploads/2015/08/vegetarian-diet-plan-to-lose-weight2-day-diet-plan-weight-loss-diet-plan-for-vegetarians-fat-kdfn622m.jpg'height='280'width='350'>";
+      }
+    </script>
+    </div>
+   <center><h1>BMI CALCULATOR</h1>
+<div class="table">
+  <table>
+    <tr>
+      <th>Enter your weight in kg:</th>
+      <td><input type="number" id="weight" name ="weight"></td>
+    </tr>
+    <tr>
+      <th>Enter your height in cm:</th>
+      <td><input type="number" id="height"></td>
+      <td><a href="http://127.0.0.1:5500/conv.html">(into cms conv)</a></td>
+    </tr>
+    <tr>
+      <td colspan="2"><button onclick="calculateBMI()">CALCULATE BMI</button></td>
+    </tr>
+    <tr>
+      <th colspan="2"><span id="result"></span></th>
+    </tr>
+  </table>
+</div></center>
+  </body>
+  </html>

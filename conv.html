@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Converter</title>
+    <style>
+      body{
+        background-color: #E3F4F4;
+      }
+      p{
+        font-size: 2rem;
+      }
+      input{
+        font-size: 1.5rem;
+      }
+    </style>
+</head>
+<body>
+    <script>
+        function convertFeetToCM() {
+			let feet = document.getElementById("feet").value;
+      let inch=document.getElementById("inch").value;
+			let cm = (feet*12)*2.54+inch*2.54;
+			document.getElementById("cm").value = (cm.toFixed(2));
+		}
+    </script>
+    <div class="conv">
+        <h1>Feet to CM Converter</h1>
+        <table>
+          <tr>
+            <th><p>Enter the Height</p></th>
+            <td><input type="number" id="feet" name="feet" placeholder="feet" ></td>
+            <td><input type="number" id="inch" name="inch" placeholder="inch" onchange="convertFeetToCM()"></td>
+            </tr>
+            <tr>  
+            <th><p>Result in cm:</p></th>
+            <td><input type="text" id="cm" name="cm"></td>
+          </tr>
+          </table>
+      </div>
+</body>
+</html>
